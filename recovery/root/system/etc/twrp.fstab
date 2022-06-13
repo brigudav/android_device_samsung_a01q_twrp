@@ -1,0 +1,27 @@
+# mount point    fstype   device              device2                  flags
+/system_root      ext4   /dev/block/mapper/system                      flags=backup=0;removable
+/vendor           ext4   /dev/block/mapper/vendor                      flags=backup=0;removable
+/product          ext4   /dev/block/mapper/product                     flags=backup=0;removable
+/odm              ext4   /dev/block/mapper/odm                         flags=backup=0;removable
+/metadata         ext4   /dev/block/bootdevice/by-name/metadata        flags=backup=1;display="Metadata"
+/boot             emmc   /dev/block/bootdevice/by-name/boot
+/recovery         emmc   /dev/block/bootdevice/by-name/recovery        flags=backup=1
+/efs              ext4   /dev/block/bootdevice/by-name/sec_efs         flags=backup=1;display="EFS"
+/firmware         emmc   /dev/block/bootdevice/by-name/apnhlos         flags=backup=1;display="Firmware"
+/modem            emmc   /dev/block/bootdevice/by-name/modem           flags=backup=1;display="Modem";flashimg
+/dsp              emmc   /dev/block/bootdevice/by-name/dsp
+/misc             emmc   /dev/block/bootdevice/by-name/misc
+/keydata          ext4   /dev/block/bootdevice/by-name/keydata
+/keyrefuge        ext4   /dev/block/bootdevice/by-name/keyrefuge
+/dtbo             emmc   /dev/block/bootdevice/by-name/dtbo            flags=backup=1;display="Dtbo";flashimg
+/optics           ext4   /dev/block/bootdevice/by-name/optics          flags=backup=0;display="Optics"
+/optics_image     emmc   /dev/block/bootdevice/by-name/optics          flags=backup=1;flashimg;display="Optics_Image";flashimg
+/prism            ext4   /dev/block/bootdevice/by-name/prism           flags=backup=0;display="Prism"
+/prism_image      emmc   /dev/block/bootdevice/by-name/prism           flags=backup=1;flashimg;display="Prism_Image";flashimg
+/vbmeta_samsung   emmc   /dev/block/bootdevice/by-name/vbmeta_samsung  flags=backup=1;display="VBMeta_Samsung";flashimg
+/vbmeta_system    emmc   /dev/block/bootdevice/by-name/vbmeta_system   flags=backup=1;display="VBMeta_System";flashimg
+/preload          ext4   /dev/block/bootdevice/by-name/hidden          flags=backup=1;display="Preload"
+/carrier          ext4   /dev/block/bootdevice/by-name/carrier         flags=backup=1;display="Carrier"
+# Removable storage
+/external_sd   vfat   /dev/block/mmcblk0p1     /dev/block/mmcblk0      flags=fsflags=utf8;display="MicroSD";storage;wipeingui;removable
+/usb-otg       vfat   /dev/block/sdf1          /dev/block/sdf          flags=fsflags=utf8;display="USB-Storage";storage;wipeingui;removable

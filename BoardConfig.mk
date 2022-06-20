@@ -38,7 +38,7 @@ BOARD_KERNEL_CMDLINE += \
     androidboot.usbconfigfs=true \
     androidboot.selinux=permissive
 
-BOARD_KERNEL_IMAGE_NAME    := Image.gz
+BOARD_KERNEL_IMAGE_NAME    := zImage
 BOARD_KERNEL_PAGESIZE      := 2048
 BOARD_BOOT_HEADER_VERSION  := 2
 BOARD_KERNEL_BASE          := 0x80000000
